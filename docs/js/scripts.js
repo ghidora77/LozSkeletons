@@ -1,3 +1,3 @@
-$(function(){
+$(function() {
   $('body').removeClass('fade-out');
 });
