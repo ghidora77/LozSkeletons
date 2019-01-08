@@ -24,10 +24,11 @@
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/TabLogo.png">
+  <link rel="icon" type="image/png" href="images/favicon.png">
 
 </head>
 <body>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="../js/scripts.js"></script>
   <script>document.body.className += 'fade-out';</script>
@@ -49,42 +50,54 @@
     </div>
   </div>
 
+
   <div class="container">
     <div class="row">
-      <div class="twelve columns" style="margin-top: 3%" align=left>
-        <h3>Computer Science</h3>
-        <p>We're passionate about studying and applying the fundamentals of
-          computer science to our projects. We have a background in programming and
-          computer science, and we've found that exploring the techniques
-          in this discipline does more than just give us some knowledge on how to do
-          certain things - it changes the way we think about problem-solving.</p>
-
-          <p>Computing is a process where you have to think logically - you can't simply
-          expect a computer to understand what you are trying to communicate, and
-          it is essential to plan the process and truly understand and define what it is
-          you're trying to achieve. We enjoy the fact that computer science takes logical thinking,
-          problem solving and adaptability to the extreme.     </p>
-
+      <div class="twelve columns" style="margin-top: 1%" align = center>
+        <h3>Contact Loz Digital</h3>
+        <p>We're always on the lookout for unique and challenging projects; we normally limit
+        our workload to one or two comprehensive projects at any given time, typically in the realm of data engineering,
+        process optimization or automation, but we'd love to hear your ideas and perhaps build
+        some amazing things. We greatly appreciate your time in messaging us, and we will get back to
+        you shortly.</p>
       </div>
     </div>
   </div>
 
   <div class="container">
     <div class="row">
-      <div class="twelve columns" style="margin-top: 1%" align=center>
-        <h4>Computer Science Projects</h4>
-        <p>Here are a few of the computer science projects we've been working on. We've
-        spent quite a bit of time trying to really illustrate the process rather than simply
-        provide some code and the output. We hope this illustrates our mentality when it comes to
-        computer science.</p>
+      <div class="twelve columns" style="margin-top: 3%" align = left>
+          <!-- The above form looks like this -->
+          <form>
+            <div class="row">
+              <div class="six columns">
+                <label for="exampleEmailInput">Your email</label>
+                <input class="u-full-width" type="email" placeholder="YourEmail.com" id="exampleEmailInput">
+              </div>
+              <div class="six columns">
+                <label for="exampleRecipientInput">Reason for contacting</label>
+                <select class="u-full-width" id="exampleRecipientInput">
+                  <option value="Option 1">Ideas</option>
+                  <option value="Option 2">Questions</option>
+                  <option value="Option 3">Work With Us</option>
+                </select>
+              </div>
+            </div>
+            <label for="exampleMessage">Message</label>
+            <textarea class="u-full-width" placeholder="Hi Loz Digital!" id="exampleMessage"></textarea>
+            <label class="example-send-yourself-copy">
+              <input type="checkbox">
+              <span class="label-body">Send a copy to yourself</span>
+            </label>
+            <input class="button-primary" type="submit" value="Submit">
+          </form>
+
+  <!-- Always wrap checkbox and radio inputs in a label and use a <span class="label-body"> inside of it -->
+
+  <!-- Note: The class .u-full-width is just a utility class shorthand for width: 100% -->
       </div>
     </div>
   </div>
-
-
-
-
-
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
