@@ -2,8 +2,7 @@
 if(isset($_POST['submit'])){
     $to = "info@loz.vision"; // this is your Email address
     $from = $_POST['email']; // this is the sender's Email address
-    // $first_name = $_POST['first_name'];
-    $first_name = "Sender";
+    $first_name = $_POST['email'];
     $subject = "Form submission";
     $subject2 = "Copy of your form submission";
     $message = $first_name . " wrote the following:" . "\n\n" . $_POST['message'];
@@ -28,7 +27,6 @@ if(isset($_POST['submit'])){
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'UA-131903126-1');
 </script>
 
@@ -85,7 +83,7 @@ if(isset($_POST['submit'])){
   <div class="container">
     <div class="row">
       <div class="twelve columns" style="margin-top: 1%" align = center>
-        <h3>Contact Loz Analytics</h3>
+        <h3>Contact Loz Digital</h3>
         <p>We're always on the lookout for unique and challenging projects; we normally limit
         our workload to one or two comprehensive projects at any given time, typically in the realm of data engineering,
         process optimization or automation, but we'd love to hear your ideas and perhaps build
@@ -103,7 +101,7 @@ if(isset($_POST['submit'])){
             <div class="row">
               <div class="six columns">
                 <label for="exampleEmailInput">Your email</label>
-                <input name="email" class="u-full-width" type="text" placeholder="YourEmail.com" id="exampleEmailInput">
+                <input class="u-full-width" type="email" placeholder="YourEmail.com" id="exampleEmailInput">
               </div>
               <div class="six columns">
                 <label for="exampleRecipientInput">Reason for contacting</label>
@@ -115,12 +113,12 @@ if(isset($_POST['submit'])){
               </div>
             </div>
             <label for="exampleMessage">Message</label>
-            <textarea name="message" class="u-full-width" placeholder="Hi Loz Analytics!" id="exampleMessage"></textarea>
+            <textarea class="u-full-width" placeholder="Hi Loz Digital!" id="exampleMessage"></textarea>
             <label class="example-send-yourself-copy">
               <input type="checkbox">
               <span class="label-body">Send a copy to yourself</span>
             </label>
-            <input class="button-primary" name="submit" value="Submit">
+            <input class="button-primary" type="submit" value="Submit">
           </form>
 
   <!-- Always wrap checkbox and radio inputs in a label and use a <span class="label-body"> inside of it -->
