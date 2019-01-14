@@ -16,7 +16,7 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>Loz Homepage</title>
+  <title>Aero Charting</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -64,15 +64,15 @@
     <div class="row">
       <div class="twelve columns" style="margin-top: 3%" align=left>
         <h3>Aeronautical Charting</h3>
-            <p>We met with the Geospatial Information Firm, <a href="http://www.terraveta.com/">
-            <i>TerraVeta</i></a>, in the fall
-            of 2018 to develop automation tools for mapping aviation charts.
+            <p>We met with the Geospatial Information Firm,
+            <a href="http://www.terraveta.com/"><i>TerraVeta</i></a>,
+            in the summer of 2018 to develop automation software for mapping aviation charts.
             These important and complicated graphical documents provide essential information
             to the aviation community, and have to be constructed with precision
-            and attention to detail. With <i>TerraVeta's</i> expertise in the field
-            and our excitement in tackling unique data and
-            automation challenges, we successfully built a simple, intuitive system that
-            allows the user to build error-free aviation charts instantaneously.
+            and attention to detail. With <i>TerraVeta's</i> expertise in the aviation field
+            and our excitement in tackling unique data and automation challenges,
+            we successfully built a simple, intuitive system that converted a manual,
+            time-intensive process into an automated, error-free solution.
             </p>
       </div>
     </div>
@@ -82,48 +82,58 @@
     <div class="row">
       <div class="twelve columns" style="margin-top: 1%" align=left>
         <h4>The Project</h4>
-            <p>Here's a sample of an aviation chart, which in this case describes
-                how a pilot would fly into a specific airfield following a specific approach
-                procedure.</p>
+            <p>Here's a sample aviation chart, which in this case describes
+            how a pilot would fly into a specific airport following a specific approach
+            procedure.</p>
+
             <img src="../images/AviationChart.png" alt="aviation" align = center >
+
             <p style="margin-top: 2%">
-            As you can see, there's a significant amount of information, including
+            There's a significant amount of information, including
             safety warnings, terrain contours, communication frequencies, geospatial
-            data, and any relevant information that affects flight safety.
-            No two charts are the same, and the information
-            that is needed on each chart changes based on many shifting criteria,
-            which makes this a tricky problem for automation. Our approach to the
-            problem was simple:
-                <h5 style="color:darkred;"> <b> Clean Data -> Simple Code </b> </h5>
-            We broke the problem down into two major sections
-             </p>
-                <ul>
-                  <li> Data
-                      <ul>
-                          <li>What data do we need?</li>
-                          <li>Where is the data located?</li>
-                          <li>Is the data we obtain accurate?</li>
-                          <li>What data transformations do we need to complete?</li>
-                          <li>What calculations are required?</li>
-                          <li>What is the best output to ensure proper plotting ?</li>
-                      </ul>
-                  </li>
+            data, and other instructions that affect flight safety. No two charts
+            are the same, and the information that is needed on each chart changes
+            based on shifting criteria, which makes this a tricky problem when building
+            an automated solution. Creating these charts is a manual process
+            done by technicians with a strong background and understanding in aeronautics -
+            our goal was to save as much time as possible by extracting data from a
+            large database, cleaning and transforming the information, and then
+            accurately plotting the correct data onto the chart with perfect accuracy.
+            Our approach to the problem was simple:
+            </p>
 
+            <h5 style="color:darkred;"> <b>Clean Data -> Simple Code </b> </h5>
 
-                  <li> Programming
-                      <ul>
-                          <li>What information is essential?</li>
-                          <li>Which decisions cascade into the way other pieces of the chart are plotted? </li>
-                          <li>What logic do we embed into each piece?</li>
-                          <li>Which segments need dynamic logic, and how do we determine
-                              the priorities within the programming environment?</li>
-                      </ul>
-                  </li>
+            <p>We broke the project down into two major sections, and spent several weeks
+            asking as many questions as we could and testing out possible solutions.
+            </p>
 
+            <ul>
+              <li> Data
+                  <ul>
+                      <li>What data do we need?</li>
+                      <li>Where is the data located?</li>
+                      <li>Is the data we obtain accurate?</li>
+                      <li>What data transformations do we need to complete?</li>
+                      <li>What calculations are required?</li>
+                      <li>What is the best output to ensure proper plotting ?</li>
+                  </ul>
+              </li>
 
-            <p>We'll go into more detail on each of these segments, but in a complicated
-            problem like this, it is essential to ask as many questions up front and
-        determine a general plan. </p>
+              <li> Programming
+                  <ul>
+                      <li>What information is essential?</li>
+                      <li>Which decisions cascade into the way other pieces of the chart are plotted? </li>
+                      <li>What logic do we embed into each piece?</li>
+                      <li>Which segments need dynamic logic, and how do we determine
+                          the priorities within the programming environment?</li>
+                  </ul>
+              </li>
+            </ul>
+
+            <p>In a complicated problem like this, it is essential to ask as many questions up front and
+            determine a general plan, then break up the work into numerous small,
+            attainable segments. </p>
       </div>
     </div>
   </div>
@@ -132,55 +142,65 @@
     <div class="row">
       <div class="twelve columns" style="margin-top: 1%" align=left>
         <h4>Data Engineering</h4>
-            <p>If you're familiar with working with data, it normally falls into one of
-            two categories - either a chaotic mess filled with erroneous information
+            <p>If you're familiar with working with data, the data environment normally fall into one of
+            two categories: either a chaotic mess filled with erroneous information
             that is incredibly difficult to navigate through, or massive amounts of information
-            that takes time to map the endless relationships. This project falls more
+            that take time to map the endless relationships. This project falls more
             into the latter category, as we used a government database with a clear maintenance
             plan and feedback loop. However, we had to create a logical, formulaic approach
             to make sure we were extracting only the data that was absolutely necessary,
             and no more - otherwise, the sheer volume of information would overwhelm our approach.
-            We started by using a workflow tool, in this case <a href="https://www.alteryx.com/">Alteryx</a>.  Alteryx does an
-            excellent job of allowing you to quickly join to databases, extract, blend, transform, mutate and
-            perform calculations, and is our preferred tool at the start of any data project. Here is
+            We started by using a workflow tool, in this case
+            <a href="https://www.alteryx.com/">Alteryx</a>.
+            Alteryx does an excellent job of allowing you to quickly join to databases,
+            extract, blend, transform, mutate and perform calculations, and is
+            our preferred tool at the start of any data project. Alteryx is our preferred tool
+            in connecting with and understanding our data - while it has great tools
+            for prediction modeling, machine learning and optimization, we didn't use
+            any in this case. We did our basic and advanced certification in Alteryx, so if you have
+            specific questions about our process, please <a href="mailto:ozzy@loz.vision">contact us</a>. Here is
             a segment of our workflow, where we extract data from several different places
-            and turned it into a format that we could work with.  We're Alteryx junkies,
-            and did our basic and advanced certification in the tool, so if you have
-            specific questions about our process, please contact us.</p>
+            and molded it into a format that we could work with.</p>
 
             <img src="../images/Alteryx.png" alt="alteryx" align = center style="width:800px;height:450px;">
 
-            <p>To give you a more detailed view of one segment of the workflow, in the content below we completed
-                twenty different data transformation steps to take unformatted communication data
-                and create a hierarchy of frequencies based on what information is available
-                and which communication frequencies take precendence. We filter data
-                based on the airfield, determine what type of frequency it is (based on
-                the spectrum), remove any frequencies that would not be needed based on the
-                approach procedure, renamed the frequency types to create a hierarchy,
-                removed bad or unused frequencies, grouped them by type and used logic to
-                extract the number needed. We then turned this into a standard
-                numerical array, so the object oriented programming can plot this
-                information based on their own logic.
+            <p style="margin-top: 2%">To give you a more detailed view of one segment of the workflow, in the image below we completed
+            twenty different data transformation steps to take unformatted communication data
+            and create a hierarchy of frequencies based on what information is available
+            and which communication frequencies take precendence. Starting from the left, We filter data
+            based on the airfield, determine what type of frequency it is (based on
+            the spectrum), remove any frequencies that would not be needed based on the
+            approach procedure, rename the frequency types to create a hierarchy,
+            remove bad or unused frequencies, group them by type and use logic to
+            extract the frequencies needed. We then convert this into a standard
+            numerical array, so the object oriented programming in the next step
+            can plot this information based on their own logic.
             </p>
+
             <img src="../images/AlteryxComm.png" alt="alteryx" align = center style = "width:1000px;height:200px;">
 
-            <p>Alteryx is an excellent tool to build an automated data transformation
-            workflow, but we're often asked to provide a low-cost solution that would
-            accomodate many users and give full control to the data engineers and mappers, so we
+            <p style="margin-top: 2%">Alteryx is an excellent tool to build an automated data transformation
+            workflow, but to provide a low-cost solution that would
+            accomodate many users and give full control to the data engineers and mappers, we
             transitioned to the well-established, open-source statistical modeling programming
             language 'R'. 'R' is the preferred tool of data scientists and engineers,
             with robust capabilities in everything from data transformation to machine
             learning and prediction modeling. While Alteryx provides ease of use and
-            a visual understanding of the process, 'R''s scalability was the natural
+            a visual understanding of the process very rapidly, 'R''s scalability was the natural
             choice when having to build an automation tool that numerous people would be
-            interacting with. If you're familiar with 'R', we put a heavy reliance on the
-            'Tidyvere' methodology, and 'sf', 'Raster' and 'spData' to build geospatial
-            buffers that pull in the relevant navigational aids. We made sure that everything
-            we did within 'R' was commented and explained, to ensure that anyone on our
+            using in a limited manner. Our solution built an interface for ease of use,
+            while the scripts themselves form the backbone of the data platform. If you're
+            familiar with 'R', we put a heavy reliance on the 'Tidyvere' methodology,
+            and use the 'sf', 'Raster' and 'spData' packages to build geospatial
+            buffers that pull in the relevant navigational aids based on their
+            latitude and longitude. We ensured that everything
+            we did within 'R' was commented and documented, to ensure that anyone on our
             team could pickup and interact with the code. Here's a snippet, the entire
-            sequence included about 1500 lines of code. Again, if you have any specific questions
+            sequence included about 1000 lines of code. Again, if you have any specific questions
             about the process or 'R', please contact us.  </p>
+
             <img src="../images/Rsnippet.png" alt="alteryx" align = center >
+
       </div>
     </div>
   </div>
@@ -189,54 +209,61 @@
     <div class="row">
       <div class="twelve columns" style="margin-top: 1%" align=left>
         <h4>Programming </h4>
-            <p>The plotting is done in Microstation, a CAD software that is popular in
-                many government engineering circles. In the previous process, the user
-                would have to go through one of the governmen databases, excel spreadsheets
-                or Access databases, find the information that they needed, and physically
-                type it into the CAD software.
-                Geospatial information was plotted individually and
-                most of the information had to be manually plotted, one piece at a time. Our
-                methodology was to rethink the entire process, start from scratch and
-                develop a natural order to populating the chart. We
-                analyzed the document, went word by word and symbol by symbol
-                and mapped out how to get the data from the database
-                into Microstation instantaneously, in the exact correct position
-                without error.  Each chart is completely different,
-                fully dependent on the location and the approach procedure, so our programming
-                had to have a heavy component of both logical programming and adaptability. In the image
-                below, you can see a large chart with very important information about altitude minimums.
-                The number of values, the columns, and the values themselves are all calculated
-                based on the terrain - There is a supplemental tool that will determine this
-                information, and we automatically plotted this information into the CAD software.
-             </p>
+            <p>Putting all the text and symbols onto the page
+            is done in Microstation, CAD software that is popular in
+            many government engineering circles. Previously, the user
+            would have to go through different databases, excel spreadsheets
+            or Access files, find the information that they needed,
+            make calculations and physically type it into CAD.
+            Geospatial information was plotted individually and
+            most of the information had to be manually plotted, one piece at a time. Our
+            methodology was to rethink the entire process, start from scratch and
+            develop a natural order to populating the chart. We
+            analyzed the document, went word by word and symbol by symbol
+            and mapped out how to get the data from the database
+            into Microstation instantaneously, in the exact correct position
+            without error. Each chart is completely different,
+            fully dependent on the location and the approach procedure, so our programming
+            had to be both logical and adaptive to shifting criteria. In the image
+            below, you can see a segment of the chart with very important information about
+            the minimum altitude along the path the aircraft takes towards landing.
+            Every piece of chart is calculated based on the terrain in a supplemental
+            tool, and we automatically plotted this information into the CAD software.
+            </p>
 
-                <img src="../images/mins.png" alt="mins" align = center >
+            <img src="../images/mins.png" alt="mins" align = center >
+
             <p>Our programming philosophy is perhaps most similar to Agile methodology. We spend
-                quality time understanding all the pieces of what needs to get done,
-                we define the end goal very clearly, and We break
-                the entire project into as many different segments as possible, with a very flexible
-                plan of how these segments connect. In
-                our experience the traditional 'waterfall' methodology, which creates a specific plan
-                with each step clearly defined, associated with timelines and developed sequentially
-                rarely works - things never go to plan, and adaptability is much more important. Afterall,
-                we learn best by seeing what doesn't work, and we make progress by figuring out
-                how to transfer small successes into the other pieces of the project. At the end,
-                once our strategy worked and we got each piece to plot, we went back
-                and refactored our code for efficiency and optimization.  </p>
-
+            quality time understanding all the pieces of what needs to get done,
+            we define the end goal very clearly, and we break
+            the entire project into as many different segments as possible, with a very flexible
+            plan of how these segments connect. In
+            our experience, the traditional 'waterfall' methodology, which creates a specific plan
+            with each step clearly defined, associated with timelines and developed sequentially
+            rarely works - things never go to plan, and adaptability is much more important. Afterall,
+            we learn best by seeing what doesn't work, and we make progress by figuring out
+            how to transfer small successes into the other pieces of the project. At the end,
+            once our strategy worked and we got each piece to plot, we went back
+            and refactored our code for efficiency and optimization.
+            </p>
 
             <p>We initially started developing in the Microstation Development Language, which is
-            close to 'C' programming, but due to the lack of resources in some segments of the project,
-            we shifted to Visual Basic, which Microstation supports. VBA is a very common
+            close to the 'C' programming language that we have experience in,
+            but due to the lack of resources in some segments of the project,
+            we shifted to <i>Visual Basic</i> (VBA), which Microstation supports. VBA is a very common
             language with large user groups, and is easy to learn if you have familiarity with
             other programming languages. One of the most challenging aspects of this project was
             the shifting criteria and hierarchies. For instance, the government organization that maintains
             this development contract has several pages of criteria when determining which frequencies
             to publish, in which order, and the location on the page. Our code had to be dynamic
             enough to adapt to this type of programming, while at the same time
-            avoiding hundred-line 'if-statements'. To succeed, we created a unique framework with
+            avoiding inefficient, hundred-line 'if-statements'. To succeed, we created a unique framework with
             cascading logic that mimics the computer science principle of binary search -
-            if one event happens, then we can eliminate different chains of possibilities. </p>
+            if one event happens, then we can eliminate different chains of possibilities.
+            In general, we programmed with the mentality that certain parameters or requirements
+            could shift at any given time, and the code had to be dynamic enough to
+            accomodate.
+            </p>
       </div>
     </div>
   </div>
@@ -246,27 +273,26 @@
       <div class="twelve columns" style="margin-top: 1%" align=left>
         <h4>Summary </h4>
             <p>With a few months of planning beforehand, and a week-long session of intense
-                development work at TerraVeta's office in Saint Louis, we successfully
-                built automation software that plotted a majority of the chart
-                in question, leaving the users to focus on more important tasks that
-                involve human interpretation by aviation professionals and quality
-                assurance. TerraVeta's domain expertise in aviation was absolutely
-                essential, as their knowledge about the intricacies and what is needed
-                helped us quickly hone a plan and build a system that works.
-
-                After several weeks of debugging, testing and trying to
-                break the software any way we could, there have been no errors noted,
-                and we reduced hours worth of work down to a few seconds.
-                We eventually sold the software to the main government contractor,
-                a Fortune 30 company, and are expanding our plans for automation
-                development work in several different industries, including aviation.
-                Overall, we learned that developing a flexible approach that breaks
-                large projects into smaller chunks and pairing with experts in the
-                domain will be our approach to all of our future development work.
-
-             </p>
-            <p>No matter the industry or the process, contact us if you have some
-                ideas on automating a process. We're always up for the challenge. </p>
+            development work at <i>TerraVeta's</i> office in Saint Louis, we successfully
+            built automation software that plotted a majority of the chart
+            in question, leaving aviation professionals to focus on more important tasks that
+            involve human interpretation. <i>TerraVeta's</i> domain expertise in aviation was absolutely
+            essential, as their knowledge about the intricacies and what was needed
+            helped us quickly hone a plan and build a system that works. By pairing with experts,
+            you can learn many behind-the-scene intricacies that can address
+            frustration points that aren't evident.
+            After several weeks of debugging, testing and trying to
+            break the software any way we could, there have been no errors noted,
+            and we reduced hours worth of work down to a few seconds.
+            We eventually sold the software to the main government contractor,
+            a subsidiary of a Fortune 30 company, and are expanding our plans for automation
+            development work in several different industries, including aviation.
+            Overall, we learned that developing a flexible approach that breaks
+            large projects into smaller chunks and pairing with experts in the
+            domain will be our approach to all of our future development work.
+            </p>
+            <p>No matter the industry or the process, <a href="mailto:ozzy@loz.vision">contact us</a> if you have some
+            ideas on automating a process. We're always up for the challenge. </p>
       </div>
     </div>
   </div>
