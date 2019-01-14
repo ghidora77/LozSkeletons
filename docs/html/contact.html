@@ -1,3 +1,8 @@
+<?php
+if($_POST["message"]) {
+    mail("info@loz.vision", "Form to email message", $_POST["message"], "From: info@loz.vision");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -79,7 +84,7 @@
     <div class="row">
       <div class="twelve columns" style="margin-top: 3%" align = left>
           <!-- The above form looks like this -->
-          <form>
+          <form action="lozform.php">
             <div class="row">
               <div class="six columns">
                 <label for="exampleEmailInput">Your email</label>
