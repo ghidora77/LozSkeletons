@@ -1,8 +1,23 @@
-<?php
-if($_POST["message"]) {
-    mail("info@loz.vision", "Form to email message", $_POST["message"], $_POST["email"]);
-}
+<?php 
+if(isset($_POST['submit'])){
+    $to = "info@loz.vision"; // this is your Email address
+    $from = $_POST['email']; // this is the sender's Email address
+    // $first_name = $_POST['first_name'];
+    $first_name = "Sender";
+    $subject = "Form submission";
+    $subject2 = "Copy of your form submission";
+    $message = $first_name . " wrote the following:" . "\n\n" . $_POST['message'];
+    $message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['message'];
+
+    $headers = "From:" . $from;
+    $headers2 = "From:" . $to;
+    mail($to,$subject,$message,$headers);
+    mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
+    echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
+    // You can also use header('Location: thank_you.php'); to redirect to another page.
+    }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -84,11 +99,11 @@ if($_POST["message"]) {
     <div class="row">
       <div class="twelve columns" style="margin-top: 3%" align = left>
           <!-- The above form looks like this -->
-          <form method="post" action="lozform.php">
+          <form action="" method="post">
             <div class="row">
               <div class="six columns">
                 <label for="exampleEmailInput">Your email</label>
-                <input name="email" class="u-full-width" type="email" placeholder="YourEmail.com" id="exampleEmailInput">
+                <input name="email" class="u-full-width" type="text" placeholder="YourEmail.com" id="exampleEmailInput">
               </div>
               <div class="six columns">
                 <label for="exampleRecipientInput">Reason for contacting</label>
@@ -105,7 +120,7 @@ if($_POST["message"]) {
               <input type="checkbox">
               <span class="label-body">Send a copy to yourself</span>
             </label>
-            <input class="button-primary" type="submit" value="Submit">
+            <input class="button-primary" name="submit" type="text" value="Submit">
           </form>
 
   <!-- Always wrap checkbox and radio inputs in a label and use a <span class="label-body"> inside of it -->
