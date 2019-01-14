@@ -1,6 +1,6 @@
 <?php
 if($_POST["message"]) {
-    mail("info@loz.vision", "Form to email message", $_POST["message"], "From: info@loz.vision");
+    mail("info@loz.vision", "Form to email message", $_POST["message"], $_POST["email"]);
 }
 ?>
 <!DOCTYPE html>
@@ -88,7 +88,7 @@ if($_POST["message"]) {
             <div class="row">
               <div class="six columns">
                 <label for="exampleEmailInput">Your email</label>
-                <input class="u-full-width" type="email" placeholder="YourEmail.com" id="exampleEmailInput">
+                <input name="email" class="u-full-width" type="email" placeholder="YourEmail.com" id="exampleEmailInput">
               </div>
               <div class="six columns">
                 <label for="exampleRecipientInput">Reason for contacting</label>
@@ -100,7 +100,7 @@ if($_POST["message"]) {
               </div>
             </div>
             <label for="exampleMessage">Message</label>
-            <textarea class="u-full-width" placeholder="Hi Loz Analytics!" id="exampleMessage"></textarea>
+            <textarea name="message" class="u-full-width" placeholder="Hi Loz Analytics!" id="exampleMessage"></textarea>
             <label class="example-send-yourself-copy">
               <input type="checkbox">
               <span class="label-body">Send a copy to yourself</span>
