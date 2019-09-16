@@ -30,10 +30,13 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="../css/normalize.css">
   <link rel="stylesheet" href="../css/skeleton.css">
+	<link rel="stylesheet" href="../css/top_navbar.css">
+
+	<script type="text/javascript" src="../js/nav_dropdown.js"></script>
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="../images/TabLogo.png">
+  <link rel="icon" type="image/png" href="images/TabLogo.png">
 
 </head>
 <body>
@@ -43,24 +46,30 @@
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container">
-    <div class="row">
-      <div class="twelve columns" style="margin-top: 1%" align = right>
-        <a href= "../index.html">
-          <img src="../images/LozTextLogo.jpg" alt="Loz Logo" align = left style="width:100px;height:100px;">
-        </a>
-          <a class="button" href="projects.html">Projects</a>
-          <a class="button" href="writing.html">Writing</a>
-          <a class="button" href="dataSci.html">Data Science</a>
-          <a class="button" href="compSci.html">Comp Sci</a>
-          <a class="button" href="about.html">About Us</a>
-      </div>
-    </div>
-  </div>
+
+  <div class="navbar" id="navmenu" style="z-index: 10;">
+		<!-- LOZ logo in top left corner -->
+		<a href="../index.html" class="navimgcon">
+		<img class="navbar-image enabled" src="../images/loz-02.png" alt="Loz Logo">
+		</a>
+
+		<img class="icon button" id="hambrgr" src="../images/hamburger.png" onClick="openNav()" alt="">
+		<img class="icon button" id="ext" src="../images/Exit.png" onClick="openNav()" alt="">
+
+		<!-- navigation menu links-->
+	  <div class="nav-links">
+		  <a class="button navlink" href="projects.html" id="projects">Projects</a>
+		  <a class="button navlink" href="dataSci.html" id="science">Data Science</a>
+		  <a class="button navlink" href="writing.html" id="writing">Writing</a>
+		  <a class="button navlink" href="about.html" id="about">About</a>
+		  <a class="button navlink" href="contact.html" id="contact">Contact Us</a>
+	  </div>
+
+</div>
 
   <div class="container">
     <div class="row">
-      <div class="twelve columns" style="margin-top: 3%" align=left>
+      <div class="twelve columns" style="margin-top: 3% padding: 5%; padding-top: 60px;" align="left">
         <h3>Computer Science</h3>
             <p>We're passionate about studying and applying the fundamentals of
             computer science to our projects. We have a background in programming and

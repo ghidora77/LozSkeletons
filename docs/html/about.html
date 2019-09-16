@@ -14,7 +14,7 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>About</title>
+  <title>About | Loz Analytics</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -25,11 +25,17 @@
   <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open Sans" rel="stylesheet">
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="../css/normalize.css">
   <link rel="stylesheet" href="../css/skeleton.css">
+	<link rel="stylesheet" href="../css/top_navbar.css">
+	
+	<script type="text/javascript" src="../js/nav_dropdown.js"></script>
+
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -43,26 +49,37 @@
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="navbar" id="navmenu" style="z-index: 10;">
+		<!-- LOZ logo in top left corner -->
+		<a href="../index.html">
+		<img class="navbar-image enabled" src="../images/loz-02.png" alt="Loz Logo">
+		</a>
+		
+		<div onClick="changeToX(this)" id="mainhmbrgr">
+			<div class="icon button" id="hambrgr" onClick="openNav()">
+				<div class="bar1"></div>
+				<div class="bar2"></div>
+				<div class="bar3"></div>
+			</div>
+		</div>
+		
+		<!-- navigation menu links-->
+	  <div class="nav-links">
+		  <a class="button navlink" href="projects.html" id="projects">Projects</a>
+		  <a class="button navlink" href="dataSci.html" id="science">Science</a>
+		  <a class="button navlink" href="writing.html" id="writing">Writing</a>
+		  <a class="button navlink" href="about.html" id="about">About</a>
+		  <a class="button navlink" href="contact.html" id="contact">Contact Us</a>
+	  </div>
+		
+</div>
+	
+<div style="padding: 2%; padding-top: 60px; ">
   <div class="container">
     <div class="row">
-      <div class="twelve columns" style="margin-top: 1%" align = right>
-        <a href= "../index.html">
-          <img src="../images/LozTextLogo.jpg" alt="Loz Logo" align = left style="width:100px;height:100px;">
-        </a>
-          <a class="button" href="projects.html">Projects</a>
-          <a class="button" href="writing.html">Writing</a>
-          <a class="button" href="dataSci.html">Data Science</a>
-          <a class="button" href="compSci.html">Comp Sci</a>
-          <a class="button" href="about.html">About Us</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="row">
-      <div class="twelve columns" style="margin-top: 3%" align=left>
+      <div class="twelve columns" style="margin-top: 3%;" align="left">
         <h2>About Us</h2>
-        <p>We (founders Luke and Ozzy) started Loz Digital after teaming up on a project involving
+        <p>We (founders Luke and Ozzy) started Loz Analytics after teaming up on a project involving
          automation in the aviation industry. Since then, we've realized the great potential
          in applying data, programming and design thinking to solve unique problems and
          find ways to improve processess through automation and logical thinking.
@@ -74,7 +91,7 @@
 
   <div class="container">
     <div class="row">
-      <div class="twelve columns" style="margin-top: 1%" align=left>
+      <div class="twelve columns" style="margin-top: 1%;" align="left">
         <h4>Our Process</h4>
         <p>Our approach is simple. We spend plenty of time understanding and defining
           the problem and then break it down into as many fundamental component parts
@@ -85,6 +102,7 @@
       </div>
     </div>
   </div>
+</div>
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->

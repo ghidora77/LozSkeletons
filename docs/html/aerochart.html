@@ -14,7 +14,7 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>Aero Charting</title>
+  <title>Aero Charting | Loz Analytics</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -25,15 +25,27 @@
   <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open Sans" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.typekit.net/nnb7tcw.css">
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="../css/normalize.css">
   <link rel="stylesheet" href="../css/skeleton.css">
+  <link rel="stylesheet" href="../css/top_navbar.css">
+  <link rel="stylesheet" href="../css/aero_chart_styles.css">
+  <link rel="stylesheet" href="../css/main_styles.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <!--<link rel="stylesheet" href="../css/image_flip.css">-->
+
+  <script type="text/javascript" src="../js/nav_dropdown.js"></script>
+  <script type="text/javascript" src="../css/image_flip.css"></script>
+
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="../images/TabLogo.png">
+  <link rel="icon" type="image/png" href="../images/favicon2.png">
 
 </head>
 <body>
@@ -43,26 +55,42 @@
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container">
-    <div class="row">
-      <div class="twelve columns" style="margin-top: 1%" align = right>
-        <a href= "../index.html">
-          <img src="../images/LozTextLogo.jpg" alt="Loz Logo" align = left style="width:100px;height:100px;">
-        </a>
-          <a class="button" href="projects.html">Projects</a>
-          <a class="button" href="writing.html">Writing</a>
-          <a class="button" href="dataSci.html">Data Science</a>
-          <a class="button" href="compSci.html">Comp Sci</a>
-          <a class="button" href="about.html">About Us</a>
-      </div>
-    </div>
-  </div>
+  <div class="navbar" id="navmenu" style="z-index: 10;">
+  		<!-- LOZ logo in top left corner -->
+      <a href="../index.html">
+        <div class="navimgcon">
+          <img class="navbar-image big" src="../images/loz big-01.png">
 
+  <img class="navbar-image small" src="../images/loz laptop-01.png">
+  <img class="navbar-image mobile" src="../images/loz mobile.png">
+        </div>
+  		</a>
+
+  		<div onClick="changeToX(this)" id="mainhmbrgr">
+  			<div class="icon button" id="hambrgr" onClick="openNav()">
+  				<div class="bar1"></div>
+  				<div class="bar2"></div>
+  				<div class="bar3"></div>
+  			</div>
+  		</div>
+
+  		<!-- navigation menu links-->
+  	  <div class="nav-links">
+  		  <a class="button navlink ripple" href="projects.html" id="projects">Projects</a>
+  		  <a class="button navlink ripple" href="dataSci.html" id="science">Data Science</a>
+  		  <a class="button navlink ripple" href="writing.html" id="writing">Writing</a>
+  		  <a class="button navlink ripple" href="../index.html#p1" id="about">About</a>
+  		  <a class="button navlink blue ripple" href="contact.html" id="contact">Contact Us</a>
+  	  </div>
+
+</div>
+
+	<div style="padding: 2%; padding-top: 65px;">
   <div class="container">
     <div class="row">
-      <div class="twelve columns" style="margin-top: 3%" align=left>
-        <h3>Aeronautical Charting</h3>
-            <p>Pilots need information about their destination airport or airfield,
+      <div class="twelve columns" style="margin-top: 3%" align="left">
+        <h1>Aeronautical Charting</h1>
+            <h5>Pilots need information about their destination airport or airfield,
                 and this information is relayed through manually crafted charts;
                 These important and complicated graphical documents provide essential information
                 to the aviation community, and have to be constructed with precision
@@ -75,8 +103,8 @@
                 have a strong background and understanding in aeronautics, but a
                 large portion of the time was spent on menial tasks, such as extracting
                 information from a data piece-by-piece and individually plotting each element.
-                </p>
-            <p>To address this issue, we collarborated with the Geospatial Information firm,
+              </h5>
+            <h5>To address this issue, we collarborated with the Geospatial Information firm,
                 <a href="http://www.terraveta.com/"><i>TerraVeta</i></a>,
                 to develop automation software for mapping aviation charts.
                 Our goal was to save as much time as possible by extracting data from a
@@ -87,7 +115,7 @@
                 and our excitement in tackling unique data and automation challenges,
                 we successfully built a simple, intuitive system that converted a manual,
                 time-intensive process into an automated, error-free solution.
-                </p>
+              </h5>
       </div>
     </div>
   </div>
@@ -95,24 +123,23 @@
   <div class="container">
     <div class="row">
       <div class="twelve columns" style="margin-top: 1%" align=left>
-        <h4>The Project</h4>
-            <p>Here's a sample aviation chart, which in this case describes
+        <h1>The Project</h1>
+            <h5>Here's a sample aviation chart, which in this case describes
             how a pilot would fly into a specific airport following a specific approach
-            procedure.</p>
+            procedure.</h5>
 
-            <img src="../images/AviationChart.png" alt="aviation" align = center >
+            <img src="../images/AviationChart.png" class="aerochart-image595 scroll-img" id="scrollimg1" alt="aviation" align = center >
 
-            <p style="margin-top: 2%">
+            <h5 style="margin-top: 2%">
 
             Our approach to the problem was simple:
-            </p>
+          </h5>
 
-            <h5 style="color:darkred;"> <b>Clean Data -> Simple Code </b> </h5>
+            <h3 style="color:black;"> <b>Clean Data <i class="far fa-arrow-alt-circle-right"></i> Simple Code </b> </h3>
 
-            <p>We broke the project down into two major sections, Data and Programming.
+            <h5>We broke the project down into two major sections, Data and Programming.
                 We spent several weeks questions and testing out possible approaches.
                 Some of the questions we asked ourselves were:
-            </p>
 
             <ul>
               <li> Data
@@ -137,9 +164,9 @@
               </li>
             </ul>
 
-            <p>In a complicated problem like this, it is essential to ask as many questions up front and
+            In a complicated problem like this, it is essential to ask as many questions up front and
             determine a general plan, then break up the work into numerous small,
-            attainable segments. </p>
+            attainable segments. </h5>
       </div>
     </div>
   </div>
@@ -147,8 +174,8 @@
   <div class="container">
     <div class="row">
       <div class="twelve columns" style="margin-top: 1%" align=left>
-        <h4>Data Engineering</h4>
-            <p>The data environment normally falls into one of
+        <h1>Data Engineering</h1>
+            <h5>The data environment normally falls into one of
             two categories: either a chaotic mess filled with erroneous information
             that is incredibly difficult to navigate through, or massive amounts of information
             that take time to map the endless relationships. This project falls more
@@ -165,11 +192,11 @@
             a segment of our workflow, where we extract data from several different places
             and molded it into a format that we could work with. While this is a complex web
             of data transformations, the end result was a set of very clean and concise
-            arrays that we could input into the CAD plotting environment. </p>
+            arrays that we could input into the CAD plotting environment. </h5>
 
-            <img src="../images/Alteryx.png" alt="alteryx" align = center style="width:800px;height:450px;">
+            <img src="../images/Alteryx.png" class="aerochart-image800 scroll-img" id="scroll-img2" alt="alteryx" align = center>
 
-            <p style="margin-top: 2%">
+            <h5 style="margin-top: 2%">
             To give you a more detailed view of one segment of the workflow, the image below shows
             twenty different data transformation steps taking unformatted communication data
             and outputting a hierarchy of frequencies based on what information is available
@@ -192,11 +219,11 @@
             </ul>
 
             At the end of this section, our unformatted data becomes relevant and useful.
-            </p>
+            </h5>
 
-            <img src="../images/AlteryxComm.png" alt="alteryx" align = center style = "width:1000px;height:200px;">
+            <img src="../images/AlteryxComm.png" class="aerochart-image1000 scroll-img" id="scroll-img3" alt="alteryx" align = "center">
 
-            <p style="margin-top: 2%">
+            <h5 style="margin-top: 2%">
             Alteryx is an excellent tool to build an automated data transformation
             workflow, but to accomodate many users and give full control to the data engineers and mappers, we
             transitioned to the well-established, open-source statistical modeling programming
@@ -213,9 +240,9 @@
             latitude and longitude. We ensured that everything
             we did within 'R' was commented and documented, to ensure that anyone on our
             team could pickup and interact with the code. Here's a snippet, the entire
-            sequence included about 1000 lines of code.</p>
+            sequence included about 1000 lines of code.</h5>
 
-            <img src="../images/Rsnippet.png" alt="alteryx" align = center >
+            <img src="../images/Rsnippet.png" class="aerochart-image779 scroll-img" id="scroll-img4" alt="alteryx" align = center >
 
       </div>
     </div>
@@ -224,8 +251,8 @@
   <div class="container">
     <div class="row">
       <div class="twelve columns" style="margin-top: 1%" align=left>
-        <h4>Programming </h4>
-            <p>Putting all the text and symbols onto the page
+        <h1>Programming </h1>
+            <h5>Putting all the text and symbols onto the page
             is done in Microstation, CAD software that is popular in
             many government engineering circles. Previously, the user
             would have to go through different databases, Excel spreadsheets
@@ -245,11 +272,11 @@
             the minimum altitude along the path the aircraft takes towards landing.
             Every piece of chart is calculated based on the terrain in a supplemental
             tool, and we automatically plotted this information into the CAD software.
-            </p>
+            </h5>
 
-            <img src="../images/mins.png" alt="mins" align = center >
+            <img src="../images/mins.png" class="aerochart-image798 scroll-img5" id="scroll-img" alt="mins" align = center >
 
-            <p style="margin-top: 2%">
+            <h5 style="margin-top: 2%">
             Our programming philosophy is perhaps most similar to Agile methodology. We spend
             time understanding all the pieces of what needs to get done,
             we define the end goal very clearly, and we break
@@ -263,9 +290,9 @@
             how to transfer small successes into the other pieces of the project. At the end,
             once our strategy worked and we got each piece to plot, we went back
             and refactored our code for efficiency and optimization.
-            </p>
+            </h5>
 
-            <p>We initially started developing in the Microstation Development Language, which is
+            <h5>We initially started developing in the Microstation Development Language, which is
             close to the 'C' programming language that we have experience in,
             but due to the lack of resources in some segments of the project,
             we shifted to <i>Visual Basic</i> (VBA), a common language with large user groups,
@@ -282,7 +309,7 @@
             anticipate unexpected rules and situations. This method of programming
             blended both theory and practical application from computer science
             and optimization, and is a unique solution that makes our methodology unique.
-            </p>
+            </h5>
       </div>
     </div>
   </div>
@@ -290,8 +317,8 @@
   <div class="container">
     <div class="row">
       <div class="twelve columns" style="margin-top: 1%" align=left>
-        <h4>Summary </h4>
-            <p>With a few months of planning beforehand, and a week-long session of intense
+        <h1>Summary </h1>
+            <h5>With a few months of planning beforehand, and a week-long session of intense
             development work at <i>TerraVeta's</i> office in St. Louis, we successfully
             created that automated the process of creating aviation plots,
             leaving aviation professionals to focus on more important tasks that
@@ -307,16 +334,17 @@
             a subsidiary of a Fortune 30 company, and are expanding our plans for automation
             development work in several different industries, including aviation.
 
-            </p>
-            <p>Overall, we learned that developing a flexible approach that breaks
+            </h5>
+            <h5>Overall, we learned that developing a flexible approach that breaks
             large projects into smaller chunks and pairing with experts in the
             domain is best, and will be our approach to all future development work.
-            No matter the industry or the process, <a href="mailto:ozzy@loz.vision">contact us</a>
+            No matter the industry or the process, <a href="contact.html">contact us</a>
             if you'd like to explore how we can help you automate processes to save
-            time and money. We're always up for the challenge. </p>
+            time and money. We're always up for the challenge. </h5>
       </div>
     </div>
   </div>
+	</div>
 
 
 

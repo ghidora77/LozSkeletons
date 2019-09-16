@@ -1,0 +1,515 @@
+@charset "utf-8";
+
+body {
+	transform-origin: left;
+}
+
+textarea {
+	resize: vertical;
+}
+
+.navbar #contact {
+	background: #12baed;
+	border: 1.2px solid #12baed;
+	color: white;
+	box-shadow: none;
+	background: none;
+	-webkit-transition: 375ms ease;
+  -o-transition: 375ms ease;
+  transition: 375ms ease;
+	border-radius: 500px;
+}
+
+.navbar #contact:hover {
+	background-color: transparent;
+	border-color: #12baed;
+	color: white;
+}
+
+.main-header {
+	background-image: url("../images/curvy background.svg");
+	background-size: cover;
+	background-position: bottom right;
+}
+
+.main-heading-container {
+	/*background-image: linear-gradient(to right,  rgba(14, 149, 190,0.92), rgba(18, 186, 237, 0.95));*/
+	height: 600px;
+	max-height: 70vh;
+	padding: 5% 5% 5% 6%;
+	padding-top: 0px;
+	top: 0px;
+	background-position: left;
+}
+
+.main-heading-container h1 {
+	position: relative;
+	text-align: left;
+	top: 40%;
+	margin-top: -50px !important;
+	padding-top: 0px;
+	color: white;
+	transition-duration: 0.3s;
+	-webkit-animation-name: grow;
+	-webkit-animation-duration: 800ms;
+	animation-name: grow;
+	animation-duration: 800ms;
+	animation-timing-function: cubic-bezier(0.02, 0.84, 0.29, 0.98);
+	-webkit-animation-timing-function: cubic-bezier(0.02, 0.84, 0.29, 0.98);
+	-o-animation-timing-function: cubic-bezier(0.02, 0.84, 0.29, 0.98);
+}
+
+.skewed-element {
+	transform-origin: left;
+	transform: skewY(-3deg);
+	background-color: white;
+	height: 200px;
+	max-height: 20vh;
+	box-shadow: 0px -16px 15px 0px rgba(0, 0, 0, 0.1);
+	-webkit-transition: 225ms cubic-bezier(0.04, 0.62, 0.29, 1);
+	-o-transition: 225ms cubic-bezier(0.04, 0.62, 0.29, 1);
+	transition: 225ms cubic-bezier(0.04, 0.62, 0.29, 1);
+}
+
+@media screen and (min-width: 3800px) {
+	.skewed-element {transform: skewY(0deg);}
+}
+
+#top-main {
+	padding-top: 50px;
+}
+
+.fixed-sidenav {
+	position: absolute;
+	width: 25%;
+	right: 3%;
+	margin-top: 1%;
+	border-radius: 10px;
+	background-color: rgba(245, 245, 245, 1);
+	padding: 0px 0px 18px 0px;
+	-webkit-animation-name: grow;
+	-webkit-animation-duration: 800ms;
+	animation-name: grow;
+	animation-duration: 800ms;
+	animation-timing-function: cubic-bezier(0.02, 0.84, 0.29, 0.98);
+	-webkit-animation-timing-function: cubic-bezier(0.02, 0.84, 0.29, 0.98);
+	-o-animation-timing-function: cubic-bezier(0.02, 0.84, 0.29, 0.98);
+	-webkit-transition: 325ms cubic-bezier(0.04, 0.62, 0.29, 1);
+	-o-transition: 325ms cubic-bezier(0.04, 0.62, 0.29, 1);
+	transition: 325ms cubic-bezier(0.04, 0.62, 0.29, 1);
+}
+
+.fix {
+	position: fixed;
+	top: 175px;
+	margin-top: 6.5%;
+	-webkit-transition: 725ms cubic-bezier(0.04, 0.62, 0.29, 1);
+	-o-transition: 725ms cubic-bezier(0.04, 0.62, 0.29, 1);
+	transition: 725ms cubic-bezier(0.04, 0.62, 0.29, 1);
+}
+
+.fixed-sidenav .side-link.head {
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	background-color: #12baed;
+	color: white;
+	padding: 12px 45px 12px 11px;
+}
+
+.fixed-sidenav .side-link.head:hover {
+	padding: 12px 10px 12px 46px;
+	background-color: #30B2DB;
+}
+
+.fixed-sidenav .side-link.first:hover {
+	padding: 12px 10px 6px 46px;
+}
+
+.fixed-sidenav .side-link.last:hover {
+	padding: 6px 10px 12px 46px;
+}
+
+.fixed-sidenav .side-link.last {
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	padding: 6px 45px 12px 11px;
+}
+
+.fixed-sidenav .side-link.first {
+	padding: 12px 45px 6px 11px;
+}
+
+.fixed-sidenav .side-link {
+	padding: 10px 45px 10px 11px;
+	text-align: left;
+	background-color: rgba(0, 0, 0, 0.00);
+	-webkit-transition: 325ms cubic-bezier(0.04, 0.62, 0.29, 0.98);
+	-o-transition: 325ms cubic-bezier(0.04, 0.62, 0.29, 0.98);
+	transition: 325ms cubic-bezier(0.04, 0.62, 0.29, 0.98);
+}
+
+.fixed-sidenav a {
+	text-decoration: none;
+	font-weight: 500;
+	color: #30B2DB;
+}
+
+.fixed-sidenav a i {
+	display: none;
+}
+
+.fixed-sidenav .side-link:hover {
+	padding: 10px 10px 10px 46px;
+	background-color: /*#33C3F0*/ rgba(230, 230, 230, 1);
+	/*color: white;*/
+}
+
+.ripple {
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+}
+
+.ripple:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle, #000 10%, transparent 10.01%);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  transform: scale(10, 10);
+  opacity: 0;
+  transition: transform .5s, opacity 1s;
+}
+
+.ripple:active:after {
+  transform: scale(0, 0);
+  opacity: .15;
+  transition: 0s;
+}
+
+.fixed-sidenav .side-link.head.ripple:after,.button.button-primary.ripple:after,input.ripple:after{background-image: radial-gradient(circle, #FFF 10%, transparent 10.01%);}
+.fixed-sidenav .side-link.head.ripple:active:after,.button.button-primary.ripple:active:after,input.ripple:active:after{opacity: .3;}
+
+.divider {
+	border-color: #999;
+	margin: 3% 0px 3% 6%;
+	width: 60%;
+	max-width: 1200px;
+	-webkit-animation-name: divider;
+	-webkit-animation-duration: 1.5s;
+	animation-name: divider;
+	animation-duration: 1.5s;
+	animation-timing-function: cubic-bezier(0.04, 0.62, 0.29, 0.98);
+	-webkit-animation-timing-function: cubic-bezier(0.04, 0.62, 0.29, 0.98);
+	-o-animation-timing-function: cubic-bezier(0.04, 0.62, 0.29, 0.98);
+}
+
+.button.button-primary {
+	width: 250px;
+	max-width: 90%;
+}
+
+.centered-button {
+	margin: 0 0 0 6%;
+	max-width: 900px;
+	padding: 0;
+	width: 90%;
+	-webkit-transition: 625ms cubic-bezier(0.04, 0.62, 0.29, 0.98);
+	-o-transition: 625ms cubic-bezier(0.04, 0.62, 0.29, 0.98);
+	transition: 625ms cubic-bezier(0.04, 0.62, 0.29, 0.98);
+	transform-origin: right;
+	-webkit-animation-name: grow;
+	-webkit-animation-duration: 1100ms;
+	animation-name: grow;
+	animation-duration: 1100ms;
+	animation-timing-function: cubic-bezier(0.02, 0.84, 0.29, 0.98);
+	-webkit-animation-timing-function: cubic-bezier(0.02, 0.84, 0.29, 0.98);
+	-o-animation-timing-function: cubic-bezier(0.02, 0.84, 0.29, 0.98);
+}
+
+.centered-button a {transform-origin: left;}
+
+/*.centered-button a:hover {
+	transform: scale(1.2);
+	z-index: 100;
+}
+
+.centered-button.contents {
+	transform: scale(1);
+}
+
+.centered-button.contents:hover {
+}
+
+.centered-button a:active {
+	transform: scale(1);
+	transition-duration: 400ms;
+}
+
+.centered-button.contents a:hover {
+		transform: scale(1);
+}
+
+.centered-button.contents a:active {
+		transform: scale(1);
+		transition-duration: 400ms;
+}*/
+
+/*.contents {
+	border: 1px solid black;
+	padding: 3%;
+	border-radius: 30px;
+}*/
+
+.button {
+	transition-duration: 0.3s;
+	color: black;
+	font-weight: 700;
+}
+
+.button.big-button {
+	min-height: 38px;
+	height: 70px;
+}
+
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.button:focus,
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus {
+    color: white;
+	background-color: black;
+}
+
+.resize-h1 {
+	font-weight: 500;
+	font-size: 6em;
+}
+
+.resize-h2 {
+	font-weight: 500;
+	font-size: 5em;
+}
+
+@-webkit-keyframes divider {
+	from {transform: scaleX(0);}
+	to {transform: scaleX(1);}
+}
+
+@keyframes divider {
+	from {transform: scaleX(0);}
+	to {transform: scaleX(1);}
+}
+
+@-webkit-keyframes grow {
+	from {transform: scale(0); opacity: -3;}
+	to {transform: scale(1); opacity: 1;}
+}
+
+@keyframes grow {
+	from {transform: scale(0); opacity: -3;}
+	to {transform: scale(1); opacity: 1;}
+}
+
+@-webkit-keyframes slide-up {
+	from {transform: translateY(70px); opacity: -3;}
+	to {transform: translateY(0px); opacity: 1;}
+}
+
+@keyframes slide-up {
+	from {transform: translateY(70px); opacity: -3;}
+	to {transform: translateY(0px); opacity: 1;}
+}
+
+.center-main-text-container {
+	/*background-image: url("../images/glowing sphere 2.png");*/
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: right;
+}
+
+.center-main-text {
+	background-image: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.8));
+	margin: 0;
+	width: 100%;
+}
+
+.center-main-text p {
+	color: black;
+	padding: 1% 0px 3% 6%;
+	font-size: 1.5em;
+	text-align: left;
+	width: 60%;
+	max-width: 1200px;
+	-webkit-animation-name: grow;
+	-webkit-animation-duration: 1.2s;
+	animation-name: grow;
+	animation-duration: 1.2s;
+	animation-timing-function: cubic-bezier(0.04, 0.62, 0.29, 0.98);
+	-webkit-animation-timing-function: cubic-bezier(0.04, 0.62, 0.29, 0.98);
+	-o-animation-timing-function: cubic-bezier(0.04, 0.62, 0.29, 0.98);
+}
+
+.center-sub-text-container {
+	/*background-image: url("../images/glowing sphere 2.png");*/
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: right;
+}
+
+.center-sub-text {
+	background-image: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.8));
+	margin: 0;
+	width: 100%;
+}
+
+.center-sub-text p {
+	color: black;
+	padding: 0 3% 3% 6%;
+	font-size: 1.5em;
+	text-align: left;
+	width: 60%;
+	max-width: 1200px;
+	-webkit-animation-name: grow;
+	-webkit-animation-duration: 1.5s;
+	animation-name: grow;
+	animation-duration: 1.5s;
+	animation-timing-function: cubic-bezier(0.04, 0.62, 0.29, 0.98);
+	-webkit-animation-timing-function: cubic-bezier(0.04, 0.62, 0.29, 0.98);
+	-o-animation-timing-function: cubic-bezier(0.04, 0.62, 0.29, 0.98);
+}
+
+.sub-header h2 {
+	width: 60%;
+	max-width: 1200px;
+	text-align: left;
+	padding: 3% 3% 3% 6%;
+	-webkit-animation-name: grow;
+	-webkit-animation-duration: 1s;
+	animation-name: grow;
+	animation-duration: 1s;
+	animation-timing-function: cubic-bezier(0.04, 0.62, 0.29, 0.98);
+	-webkit-animation-timing-function: cubic-bezier(0.04, 0.62, 0.29, 0.98);
+	-o-animation-timing-function: cubic-bezier(0.04, 0.62, 0.29, 0.98);
+}
+
+@media screen and (min-height: 700px) {
+	.button.button-primary {
+		transform: scale(1);
+	}
+}
+
+@media screen and (max-width: 580px) {
+	.divider {
+		margin: 100px auto;
+	}
+}
+
+@media screen and (min-width: 1000px) {
+	.button.button-primary {
+		transform: scale(1);
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.sub-header h2 {
+		width: 90%;
+	}
+
+	.center-sub-text p {
+		width: 90%;
+	}
+
+	.center-main-text p {
+		width: 90%;
+	}
+
+	.divider {
+		width: 90%;
+	}
+
+	.fixed-sidenav {
+		position: static;
+		width: 90%;
+		margin: 8% 5% 4% 5%;
+	}
+
+	.fix {
+		position: static;
+		top: 0px;
+		margin-top: 6.5%;
+	}
+}
+
+@media screen and (max-width: 280px) {
+	.button.button-primary {
+		transform: scale(0.92);
+	}
+}
+
+@media screen and (max-width: 750px) {
+	.resize-h1 {
+		font-size: 4em;
+	}
+
+	.resize-h2 {
+		font-size: 3em;
+	}
+
+	.main-heading-container h1 {
+		padding-top: 0px;
+	}
+
+	.divider {
+		margin: 6% auto;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.resize-h1 {
+		font-size: 3em;
+	}
+
+	.resize-h2 {
+		font-size: 2.5em;
+	}
+
+	.button.button-primary {
+		min-width: 65%;
+	}
+}
+
+@media screen and (max-width: 335px) {
+	.resize-h1 {
+		font-size: 2em;
+	}
+
+	.resize-h2 {
+		font-size: 1.8em;
+	}
+
+	.button.button-primary {
+		min-width: 93%;
+	}
+}
+
+@media screen and (max-height: 450px) {
+	.skewed-element {transform: skewY(0deg);}
+}
+
+@media screen and (max-height: 300px) {
+	.top-main {
+		padding-top: 0px;
+	}
+}
